@@ -1,0 +1,14 @@
+#parking gargae project
+#enter and recieve ticket / decrease overall ticekts by 1
+#spaces decrease by 1
+#lp to indicate which car is parking
+# how long will you park 
+#return ticket 
+#payment 
+#exit 
+#veh class
+
+input('Please enter your LP for a ticket')
+
+
+

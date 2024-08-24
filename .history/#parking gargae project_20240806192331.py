@@ -1,0 +1,45 @@
+#parking gargae project
+#enter and recieve ticket / decrease overall ticekts by 1
+#spaces decrease by 1
+#lp to indicate which car is parking
+# how long will you park 
+#return ticket 
+#payment 
+#exit 
+#veh class
+import math
+
+
+class Parking:
+    def __init__(self, total_spaces):
+        self.total_spaces = total_spaces
+        self.available_spaces = total_spaces
+        self.tickets = []
+
+    def ticket(self):
+        if self.available_spaces > 0:
+            self.available_spaces -= 1
+            ticket_num = len(self.tickets) + 1
+            self.tickets.append({"ticket_num": ticket_num, "paid": False})
+            print(f"ticket {ticket_num}, please park.")
+        else:
+            print("we're full, come back another time")
+
+    def paid_parking(self, ticket_num):
+        for ticket in self.tickets:
+            if ticket["ticket_num"] == ticket_num:
+            else:
+            print(f"ticket {ticket_num} is paid.")
+            return
+            print(f"ticket {ticket_num} invalid.")
+
+    def exit(self, ticket_num):
+        for ticket in self.tickets:
+            if ticket["ticket_num"] == ticket_num and ticket["paid"]:
+                self.available_spaces += 1
+                self.tickets.remove(ticket)
+                print(f"thank you, drive safe.")
+                return
+        print("try again")
+
+
